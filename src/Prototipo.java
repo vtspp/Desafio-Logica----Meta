@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.Stack;
 
 public class Prototipo {
 	public static void main(String[] args) {
@@ -25,7 +24,6 @@ public class Prototipo {
 		list.add(1);
 
 		System.out.println(list);
-		Integer azul = 0;
 		Integer controle = 0;
 		for (int i = 1; i < (list.size()) - 1; i++) {
 			if (list.get(i) < list.get(i - 1) && list.get(i) < list.get(i + 1)) {
@@ -33,7 +31,7 @@ public class Prototipo {
 
 				}
 				controle++;
-				if (list.get(i - 1) > list.get(i)) {
+				if (list.get(i) == 0 && list.get(i-1) == list.get(i+1)) {
 					controle++;
 					if (list.get(i - 1) > list.get(i) && list.get(i + 1) > list.get(i)) {
 						controle++;
